@@ -1,2 +1,2 @@
 [build]
-rustflags = ["-C", "link-args=-I ~/Downloads/lua-5.3.5/src/ -llua"]
+rustflags = ["-C", "link-args=-I ~/Downloads/lua-5.3.5/src/ -llua -lshared -L/home/shammyz/Documents/repos/stainless-experiments/mock-engine/shared/target/debug"]

@@ -5,6 +5,7 @@
 
 #include <stdio.h>
 
+extern void rust_log(char *s);
 
 //void pwd() {
 //    char cwd[1024];
@@ -12,13 +13,23 @@
 //    printf("Current working dir: %s\n", cwd);
 //}
 
+static int wrapper_log(lua_State *L) {
+   char* m = lua_tostring(L, -1);
+   rust_log(m);
+   return 1;
+}
+
 void call_lua(int* state, const char* script) {
   //  pwd();
+    //rust_log("DEU BOM PORRA");
     lua_State *L;
     L = luaL_newstate();
     printf("C: loading lua script %s\n", script);
     luaL_openlibs(L);
     luaL_loadfile(L, script);
+   
+    lua_pushcfunction(L, wrapper_log);
+    lua_setglobal(L, "rust_log");
     
     printf("C: state is %d\n", (int) *state);
     lua_pushinteger(L, (int) *state); // pass state to lua script

@@ -1,0 +1,1 @@
+{"rustc":10683586082858123265,"features":"[]","target":7849629457180435959,"profile":14996655781355331481,"path":10872709659218687626,"deps":[],"local":[{"CheckDepInfo":{"dep_info":"debug/.fingerprint/shared-f84ea7754aac566b/dep-lib-shared"}}],"rustflags":["-C","link-args=-I ~/Downloads/lua-5.3.5/src/ -llua"],"metadata":6185209705623107099}

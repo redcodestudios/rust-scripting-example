@@ -11,3 +11,4 @@ name = "calculator"
 crate-type = ["cdylib"]
 
 [dependencies]
+libc = "0.2.0"

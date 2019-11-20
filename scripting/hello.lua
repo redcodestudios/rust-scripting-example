@@ -1,1 +1,1 @@
-log("OI, EU SOU O LUA\n")
+log("OI, EU SOU O LUA PABLO LIXO\n")
