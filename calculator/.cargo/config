@@ -1,0 +1,2 @@
+[build]
+rustflags = ["-C", "link-args=-I /home/pablo/Downloads/lua-5.1/src/ -llua5.1"]
