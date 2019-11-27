@@ -1,5 +1,5 @@
 [package]
-name = "shared"
+name = "scripting-api"
 version = "0.1.0"
 authors = ["Rodrigo Oliveira <rodrigo.redcode@gmail.com>"]
 edition = "2018"
