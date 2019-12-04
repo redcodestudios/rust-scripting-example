@@ -56,7 +56,7 @@ fn main() {
     cc::Build::new()
         .flag("-I")
         .flag("lua/src/")
-        .flag("-llua5.2")
+        .flag("-llua")
         .object("../target/debug/libscripting_api.so")
         //.flag("-lscripting_api")
         //.flag("-L~/Documents/repos/stainless-experiments/mock/target/debug/")
