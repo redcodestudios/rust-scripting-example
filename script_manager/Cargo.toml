@@ -1,7 +1,7 @@
 [package]
 name = "script_manager"
 version = "0.1.0"
-authors = ["Rodrigo Oliveira <rodrigo.redcode@gmail.com>"]
+authors = ["Rodrigo Oliveira <rodrigo.redcode@gmail.com>", "Pablo Diego Silva da Silva <pablodiegoss@hotmail.com>"]
 edition = "2018"
 links = "lua"
 

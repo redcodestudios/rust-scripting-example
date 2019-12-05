@@ -1,3 +1,3 @@
 [submodule "mock/script_manager/lua/src"]
-	path = mock/script_manager/lua/src
+	path = script_manager/lua/src
 	url = https://github.com/lua/lua
