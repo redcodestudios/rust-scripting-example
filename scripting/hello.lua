@@ -1,1 +1,0 @@
-log("OI, EU SOU O LUA PABLO LIXO\n")
