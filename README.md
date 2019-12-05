@@ -1,5 +1,5 @@
-# Rust-Scripting
-Repository with boilerplate for experimenting with scripting in Rust.
+# Rust Scripting System
+Repository with boilerplate for experimenting with scripting in Rust in a context of game development, where the game state is maintained in a Rust Game Engine inside a game loop and some scripting language can be used to alter the state of game components each iteration.
 
 # Before running
 We are using Lua language as scripting language, and for that we build the lua source code before interpreting it, so after cloning the repo you should update our git submodule too.
