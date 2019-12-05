@@ -25,7 +25,7 @@ fn main() {
     let mut state: i32 = 2;
 
     loop {
-        exec_script(&mut state, "script_manager/src/script/calc.lua");
+        exec_script(&mut state, "script_manager/scripts/calc.lua");
         output(state);
         thread::sleep(time::Duration::from_millis(1000)); 
     }

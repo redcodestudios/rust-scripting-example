@@ -60,6 +60,6 @@ fn main() {
         .object("../target/debug/libscripting_api.so")
         //.flag("-lscripting_api")
         //.flag("-L~/Documents/repos/stainless-experiments/mock/target/debug/")
-        .file("c/lua_vm.c")
+        .file("drivers/c/lua_vm.c")
         .compile("lua_vm");
 }
