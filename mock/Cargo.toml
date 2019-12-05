@@ -1,0 +1,2 @@
+[workspace]
+members = ["scripting_api", "script_manager"]
