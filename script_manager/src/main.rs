@@ -2,7 +2,7 @@ use std::{thread, time};
 use std::ffi::CString;
 use std::os::raw::{c_char, c_int};
 
-#[link(name = "python3.9", kind = "static")]
+//#[link(name = "python", kind = "static")]
 extern{
     fn call_lua(state: *mut c_int, script: *const c_char);
     fn call_python(state: *mut c_int, script: *const c_char);

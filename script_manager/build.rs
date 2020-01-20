@@ -61,12 +61,6 @@ fn main() {
         .file("drivers/lua_vm.c")
         .compile("lua_vm");
    
-    //cc::Build::new()
-        //.include("python/src/cpython/Include")
-        //.include("python/src/cpython")
-        //.file("python/src/cpython/Python/asdl.c")
-        //.compile("libpython3.8.a");
-
     cc::Build::new()
         .include("python/src/cpython/Include")
         .include("python/src/cpython")
@@ -74,5 +68,8 @@ fn main() {
         .object("../target/debug/libscripting_api.so")
         .file("drivers/python_vm.c")
         .compile("python_vm");
+
+
+    println!("cargo:rustc-flags=-l python3.9 -L python/src/cpython");
 
 }
