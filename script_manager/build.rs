@@ -58,8 +58,21 @@ fn main() {
         .flag("lua/src/")
         .flag("-llua")
         .object("../target/debug/libscripting_api.so")
-        //.flag("-lscripting_api")
-        //.flag("-L~/Documents/repos/stainless-experiments/mock/target/debug/")
         .file("drivers/lua_vm.c")
         .compile("lua_vm");
+   
+    //cc::Build::new()
+        //.include("python/src/cpython/Include")
+        //.include("python/src/cpython")
+        //.file("python/src/cpython/Python/asdl.c")
+        //.compile("libpython3.8.a");
+
+    cc::Build::new()
+        .include("python/src/cpython/Include")
+        .include("python/src/cpython")
+        .flag("-lpython3.9")
+        .object("../target/debug/libscripting_api.so")
+        .file("drivers/python_vm.c")
+        .compile("python_vm");
+
 }
