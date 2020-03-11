@@ -1,2 +1,2 @@
 [workspace]
-members = ["scripting_api", "script_manager"]
+members = ["scripting_api", "rust_scripts", "script_manager"]

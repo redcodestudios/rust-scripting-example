@@ -10,6 +10,7 @@ links = "lua"
 [dependencies]
 libc = "0.2.0"
 scripting_api = {path = "../scripting_api"}
+rust_scripts = {path = "../rust_scripts"}
 
 [build-dependencies]
 cc = "1.0"
