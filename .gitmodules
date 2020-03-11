@@ -1,3 +1,6 @@
 [submodule "script_manager/lua/src"]
 	path = script_manager/lua/src
 	url = https://github.com/lua/lua
+[submodule "script_manager/python/src/cpython"]
+	path = script_manager/python/src/cpython
+	url = https://github.com/python/cpython

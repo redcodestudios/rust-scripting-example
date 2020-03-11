@@ -1,9 +1,7 @@
-#include <lua.h>
-#include <lauxlib.h>
-#include <lualib.h> 
-
-
 #include <stdio.h>
+#include <lualib.h>
+#include <lauxlib.h>
+#include <lua.h>
 
 extern void rust_log(char *s);
 
@@ -20,8 +18,6 @@ static int wrapper_log(lua_State *L) {
 }
 
 void call_lua(int* state, const char* script) {
-  //  pwd();
-    //rust_log("DEU BOM PORRA");
     lua_State *L;
     L = luaL_newstate();
     printf("C: loading lua script %s\n", script);

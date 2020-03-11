@@ -1,0 +1,1 @@
+// Rust empty file to be read on the exec_script function on main and activate rust scripting. The real scripts on rust are being called in rust_vm.c and are on the folder rust_scripts.
