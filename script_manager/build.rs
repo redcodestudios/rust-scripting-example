@@ -62,4 +62,6 @@ fn main() {
         //.flag("-L~/Documents/repos/stainless-experiments/mock/target/debug/")
         .file("drivers/lua_vm.c")
         .compile("lua_vm");
+        println!("cargo:rustc-flags=-L {}/target/debug -l scripting_api", crate_dir);
+        println!("cargo:rustc-flags= -l rust_scripts");
 }
