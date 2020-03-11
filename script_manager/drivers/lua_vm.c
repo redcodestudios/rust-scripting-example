@@ -1,9 +1,7 @@
-#include <lua.h>
-#include <lauxlib.h>
-#include <lualib.h> 
-
-
 #include <stdio.h>
+#include <lualib.h>
+#include <lauxlib.h>
+#include <lua.h>
 
 extern void rust_log(char *s);
 

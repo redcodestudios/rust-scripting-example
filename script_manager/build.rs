@@ -15,14 +15,13 @@ fn main() {
         cc::Build::new()
         .flag("-I")
         .flag("lua/src/")
-        .flag("-llua53")
+        .flag("-llua")
         .flag("-lscripting_api")
         .flag("-L/home/pablo/repositorioGit/stainless-experiments/target/debug")
         .file("drivers/lua_vm.c")
         .compile("lua_vm");
         
         cc::Build::new()
-        // .flag(format!("-L/home/pablo/repositorioGit/stainless-experiments/script_manager")
         .flag(format!("-L{}/scripts",crate_dir).as_str())
         .flag(format!("-L{}../target/debug",crate_dir).as_str())
         .flag("-lrust_scripts")
@@ -30,9 +29,8 @@ fn main() {
         .file("drivers/rust_vm.c")
         .compile("rust_vm");
         
-        // println!("cargo:rustc-flags=-L lua/src -l lua53");
+        println!("cargo:rustc-flags=-L {}/script_manager/lua/src -l lua", crate_dir);
         println!("cargo:rustc-flags=-L {}/target/debug -l scripting_api", crate_dir);
         println!("cargo:rustc-flags= -l rust_scripts");
-        // println!("cargo:rustc-flags=-l python3.9 -L python/src/cpython");
     }
 }
