@@ -18,8 +18,6 @@ static int wrapper_log(lua_State *L) {
 }
 
 void call_lua(int* state, const char* script) {
-  //  pwd();
-    //rust_log("DEU BOM PORRA");
     lua_State *L;
     L = luaL_newstate();
     printf("C: loading lua script %s\n", script);

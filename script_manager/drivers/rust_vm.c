@@ -4,7 +4,7 @@
 extern void rust_log(char *s);
 
 // Function declared in rust_scritps, received as -lrust_scripts during cc::build of rust_vm.c
-extern int multii(int);
+extern int sum_three(int);
 
 static int wrapper_log(char* msg) {
    rust_log(msg);
@@ -12,9 +12,9 @@ static int wrapper_log(char* msg) {
 }
 
 void call_rust(int* state,const char* script) {
-    rust_log("C: DEU BOM PORRA");
+    rust_log("C: Running rust_vm.c");
    
     printf("C: state is %d\n", (int) *state);
-    *state = multii(*state);
+    *state = sum_three(*state);
     printf("C: new state is %d\n", (int) *state);
 }
