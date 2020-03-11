@@ -9,7 +9,10 @@ extern{
 
 fn exec_script(state: *mut i32, script_path: &str) {
     println!("RUST: loading {} script", script_path);
-    let extension = script_path.split(".").next().unwrap();
+    let mut iter = script_path.split(".");
+    iter.next();
+    let extension = iter.next().unwrap();
+    println!("RUST:extension : {}", extension);
     unsafe {
         if extension == String::from("rs"){
             call_rust(state, CString::new(script_path).expect("CString::new failed").as_ptr());
