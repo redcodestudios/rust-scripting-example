@@ -17,7 +17,8 @@ fn main() {
         .flag("lua/src/")
         .flag("-llua")
         .flag("-lscripting_api")
-        .flag("-L/home/pablo/repositorioGit/stainless-experiments/target/debug")
+        .flag(format!("-Wl, -rpath={}/lua/src", crate_dir).as_str())
+        .flag(format!("-L{}/../target/debug",crate_dir).as_str())
         .file("drivers/lua_vm.c")
         .compile("lua_vm");
         
